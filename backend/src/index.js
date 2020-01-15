@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes')
+const cors = require('cors');
+const routes = require('./routes');
 const MongoAutentication = require('../autentication/mongo')
 
 const app = express();
@@ -10,6 +11,7 @@ mongoose.connect(`mongodb+srv://${MongoAutentication.login}:${MongoAutentication
     useUnifiedTopology: true,
 })
 
+app.use(cors({ origin: 'http://localhost:3000' }))
 // Por padrão o express não entende o formato JSON
 app.use(express.json()) // deve vir antes da rotas
 app.use(routes)
