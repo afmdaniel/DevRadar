@@ -30,7 +30,7 @@ function DevForm({ onSubmit }) {
 
         await onSubmit({
             github_username,
-            techs: techs.toLowerCase(),
+            techs,
             latitude,
             longitude,
         });

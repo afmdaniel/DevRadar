@@ -23,7 +23,7 @@ module.exports = {
         
             // console.log(name, avatar_url, bio, github_username)
         
-            const techsArray = parseStringAsArray(techs);
+            const techsArray = parseStringAsArray(techs.toLowerCase());
         
             const location = {
                 type: 'Point',
