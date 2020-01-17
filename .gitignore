@@ -1,3 +1,4 @@
 node_modules
-autentication
 copias
+dockerbuild.sh
+dockerrun.sh
